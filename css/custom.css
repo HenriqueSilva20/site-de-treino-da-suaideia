@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+ul li {
+    list-style-type: none;
+}
+/*............. fim reset ..................................................*/
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url(../img/banner-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar.scroll {
+    background: #0f1b2c;
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    transition: 0.5s linear;
+    z-index: 2;
+}
+.logo {
+    width: 200px;
+    cursor: pointer;
+}
+.navbar ul li {
+    display: inline-block;
+    margin: 0px 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+.navbar ul li::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    background: #009698;
+    height: 3px;
+    transition: 0.5s linear;
+}
+.navbar ul li:hover::after {
+    width: 100%;
+    transition: 0.5s linear;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+.content h1 {
+    color: #00aeff;
+    font-size: 2.8em;
+    margin-top: 90px;
+}
+.content p {
+    margin: 20px auto;
+    font-weight: 200;
+    color: #fff;
+    line-height: 25px;
+}
+.content>div>.btn-banner {
+    width: 200px;
+    padding: 15px 0px;
+    font-weight: bold;
+    border: 2px solid #009698;
+    background: transparent;
+    margin: 20px 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.content>div>.btn-banner>span {
+    width: 0;
+    height: 100%;
+    background: #009698;
+    position: absolute;
+    border-radius: 25px;
+    left: 0;
+    bottom: 0;
+    z-index: -1; 
+    transition: 0.5s linear;
+}
+.content>div>.btn-banner:hover span {
+    width: 100%;
+    transition: 0.5s linear;
+}
+.content>div>.btn-banner:hover {
+    border: none;
+}
+/*..... outros conteudos .....................................................
+
+    1 - Grid de 12 colunas
+    2 - Estilização de outros elementos
+
+*/
+
+/* container do grid */
+.caixa {
+    width: 1100px;
+    margin: 20px auto;
+}
+/* linha o grid */
+.linha {
+    margin-left: -10px;
+    width: 1200px;
+}
+.linha::after {
+    content: '';
+    display: table;
+    line-height: 0;
+    clear: both;
+}
+/* colunas do grid*/
+[class*="coluna"] {
+    float: left;
+    margin-left: 10px;
+    padding: 1%;
+}
+.coluna-3 {
+    width: 274px;
+}
+.coluna-4 {
+    width: 342.66667px;
+}
+.coluna-6 {
+    width: 532px;
+}
+.coluna-9 {
+    width: 880px;
+}
+.coluna-12 {
+    width: 1099px;
+}
+/** .... textos da grid **.............*/
+.txt-dest-1 {
+    text-align: center;
+    padding:  20px 0 20px 0;
+    font-size: 2.6em;
+    color: #19253a;
+}
+.txt-dest-2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #0099ff;
+}
+.txt-dest-3 {
+    text-align: center;
+    padding: 40px 0px 40px 0px;
+    color: #0e1b33;
+}
+/*... imgs ............................*/
+.img-icone {
+    width: 220px;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    cursor: pointer;
+}
+.img-pc {
+    width: 1000px;
+    padding: 5px 50px 5px 50px;
+}
+.img-icone-baixar {
+    width: 170px;
+    cursor: pointer;
+    padding-left: 40%;
+}
+.txt-dest-4 {
+    position: absolute;
+    left: 40%;
+    top: 15%;
+}
+.txt-dest-4>.txt-2 {
+    color: #00eeff;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.txt-dest-4>p {
+    color: #fff;
+    font-size: 1.2em
+}
+.btn-noticia {
+    background: #0059ff;
+    padding: 8px;
+    border-radius: 14px;
+    font-size: 0.9em;
+    transition: 0.5s linear;
+}
+.btn-noticia:hover {
+    background: transparent;
+    border: 2px solid #0059ff;
+    transition: 0.5s linear;
+}
+.btn-login {
+    background: #0059ff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s linear;
+}
+.btn-login:hover {
+    background: transparent;
+    transition: 0.5s linear;
+}
+/*------------- noticias --------------------------------*/
+.noticias {
+    background-image: url('../img/banner-2.jpg');
+    width: 100%;
+    height: 50%;
+    margin-top: 10%;
+    padding-top: 15%;
+    padding-bottom: 14%;
+    position: relative;
+}
+/*.....................................................................................*/
